@@ -1,34 +1,14 @@
-import mongoose, { Document, Schema, Types } from "mongoose";
+import mongoose from 'mongoose';
 
-export type JobStatus = "Applied" | "Interview" | "Offer" | "Rejected";
+const jobSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  company: { type: String, required: true },
+  ctc: { type: Number, required: false },
+  dateOfDrive: { type: Date, required: false },
+  status: { type: String, enum: ['applied', 'interview', 'offer', 'rejected'], default: 'applied' },
+  tags: [{ type: String }],
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  createdAt: { type: Date, default: Date.now }
+});
 
-export interface IJob extends Document {
-    user: Types.ObjectId;
-    company: string;
-    role: string;
-    status: JobStatus;
-    ctc?: number;
-    salary?: number;
-    link?: string;
-    notes?: string;
-}
-
-const jobSchema = new Schema<IJob>(
-    {
-        user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-        company: { type: String, required: true },
-        role: { type: String, required: true },
-        status: {
-            type: String,
-            enum: ["Applied", "Interview", "Offer", "Rejected"],
-            default: "Applied",
-        },
-        ctc: { type: Number }, // Added CTC to the schema
-        salary: Number,
-        link: String,
-        notes: String,
-    },
-    { timestamps: true }
-);
-
-export const Job = mongoose.model<IJob>("Job", jobSchema);
+export const Job = mongoose.model('Job', jobSchema);

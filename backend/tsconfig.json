@@ -2,13 +2,13 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
-    "rootDir": "./src",
     "outDir": "./dist",
-    "typeRoots": ["./src/types", "./node_modules/@types"],
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "rootDir": "./src",
     "strict": true,
-    "skipLibCheck": true,
-    "useUnknownInCatchVariables": false,
-  }
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

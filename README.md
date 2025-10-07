@@ -8,12 +8,12 @@ Built for developers and students preparing for placements.
 
 ## Features
 
-*  **Organize applications** by stage — Applied, Interview, Offer, or Rejected
-* Add details like **CTC (LPA)**, **Date of Drive**, **Tags**, and **Notes**
-* **Drag-and-drop Kanban board** for managing job stages
-* **Analytics dashboard** showing progress and timeline insights
-* **Secure JWT authentication** with protected routes
-* **Responsive UI** with modern UX and real-time toasts
+- **Organize applications** by stage — Applied, Interview, Offer, or Rejected
+- Add details like **CTC (LPA)**, **Date of Drive**, **Tags**, and **Notes**
+- **Drag-and-drop Kanban board** for managing job stages
+- **Analytics dashboard** showing progress and timeline insights
+- **Secure JWT authentication** with protected routes
+- **Responsive UI** with modern UX and real-time toasts
 
 ---
 
@@ -135,10 +135,10 @@ jobtracker/
 
 ## Folder Highlights
 
-* `controllers/` → Core business logic for jobs, auth, and analytics
-* `middlewares/` → JWT auth middleware
-* `models/` → Mongoose schemas
-* `components/` → Reusable UI components (buttons, cards, modals, etc.)
-* `context/` → App-wide state (auth, theme, etc.)
+- `controllers/` → Core business logic for jobs, auth, and analytics
+- `middlewares/` → JWT auth middleware
+- `models/` → Mongoose schemas
+- `components/` → Reusable UI components (buttons, cards, modals, etc.)
+- `context/` → App-wide state (auth, theme, etc.)
 
 ---
